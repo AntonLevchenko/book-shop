@@ -1,4 +1,4 @@
-import React, { FC, MouseEvent } from 'react';
+import { FC } from 'react';
 import styles from './BookDetailsPage.module.scss';
 import BookDetails from '../../BookDetails/BookDetails.tsx';
 import Container from '../../Container/Container.tsx';
@@ -13,12 +13,12 @@ interface PagesBookDetailsPageProps {}
 
 const PagesBookDetailsPage: FC<PagesBookDetailsPageProps> = () => {
   const { bookId } = useParams();
-  const { data, error } = useGetBookQuery(bookId!);
+  const { data } = useGetBookQuery(bookId!);
   const books = useAppSelector(cartBooks);
   const dispatch = useAppDispatch();
   const isBookAddedToCart = findBookById(books, bookId!);
 
-  const handleAddToCardClick = (e: MouseEvent) => {
+  const handleAddToCardClick = () => {
     dispatch(addBook(data!));
   }
 

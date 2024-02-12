@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styles from './BookDetails.module.scss';
 import { httpToHttps } from '../../shared/helpers/http-to-https.ts';
 import TextTruncate from 'react-text-truncate';
@@ -24,7 +24,7 @@ const BookDetails: FC<BookDetailsProps> = ({book, short = false}) => {
         ? <TextTruncate
           line={5}
           element="p"
-          className="text-[16px] text-gray-600"
+          containerClassName="text-[16px] text-gray-600"
           truncateText="…"
           text={volumeInfo.description} />
         : <p className="text-[16px] text-gray-600">{volumeInfo.description}</p>}
