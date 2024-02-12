@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './NavList.module.scss';
 import { NavListItem } from '../../shared/interfaces/nav-list-item.interface.ts';
-import LinkWrapper from '../Link/LinkWrapper.tsx';
+import { Link } from 'react-router-dom';
 
 interface NavListProps {
   links: NavListItem[]
@@ -12,9 +12,9 @@ const NavList: FC<NavListProps> = ({ links }) => (
     <ul className="flex gap-x-12">
       { links.map((link) => (
         <li key={link.text}>
-          <LinkWrapper url={link.url} className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to={link.url} className="text-sm font-semibold leading-6 text-gray-900">
             {link.text}
-          </LinkWrapper>
+          </Link>
         </li>
       )) }
     </ul>

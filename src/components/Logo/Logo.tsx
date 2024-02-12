@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import LinkWrapper from '../Link/LinkWrapper.tsx';
+import { Link } from 'react-router-dom';
 
 interface LogoProps {
   linkUrl: string;
@@ -12,7 +12,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({linkUrl, image}) => (
-  <LinkWrapper url={linkUrl} className="-m-1.5 p-1.5" data-testid="Logo">
+  <Link to={linkUrl} className="-m-1.5 p-1.5" data-testid="Logo">
     <span className="sr-only">{image.name}</span>
     <img
       className="h-8 w-auto"
@@ -21,7 +21,7 @@ const Logo: FC<LogoProps> = ({linkUrl, image}) => (
       src={image.url}
       alt={image.name}
     />
-  </LinkWrapper>
+  </Link>
 );
 
 export default Logo;

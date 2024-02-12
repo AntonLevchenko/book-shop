@@ -6,7 +6,7 @@ import CartPage from '../components/pages/CartPage/CartPage.tsx';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'book-shop',
     element: <App />,
     children: [
       {
