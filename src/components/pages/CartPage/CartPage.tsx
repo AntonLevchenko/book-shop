@@ -33,7 +33,7 @@ const PagesCartPage: FC<PagesCartPageProps> = () => {
         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
           <p>
             or{' '}
-            <Link to="/" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to="/book-shop" className="font-medium text-indigo-600 hover:text-indigo-500">
               Continue Shopping
               <span aria-hidden="true"> &rarr;</span>
             </Link>
